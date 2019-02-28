@@ -14,7 +14,18 @@
                         </div>
                     @endif
 
-                    You are logged in!
+                    <p>Korisnik: {{ Auth::user()->name }}</p>
+                    <span>Članarina vrijedi do: 
+                        @if (Auth::user()->clanarina < date("Y-m-d"))
+                            <div class="alert alert-danger" role="alert">
+                                {{Auth::user()->clanarina}}
+                            </div>
+                        @else
+                            <div class="alert alert-success" role="alert">
+                                {{Auth::user()->clanarina}}
+                            </div>
+                        @endif
+                        </span>
                 </div>
             </div>
         </div>
