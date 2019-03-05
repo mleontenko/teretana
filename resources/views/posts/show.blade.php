@@ -1,11 +1,13 @@
 @extends('layouts.app')
 
 @section('content')
-    <a href="/posts" class="btn btn-default">Natrag</a>
+    <br />
+    <a href="/posts" class="btn btn-primary">Natrag</a>
+    <br /><br />
     <h1>{{$post->title}}</h1>       
     <div>
         {{$post->body}}
     </div>
     <hr>
-    <small>Written on {{$post->created_at}}</small>
+    <small>Objavljeno: {{$post->created_at}}</small>
 @endsection
