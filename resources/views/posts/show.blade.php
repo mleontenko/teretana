@@ -11,4 +11,11 @@
     </div>
     <hr>
     <small>Objavljeno: {{$post->created_at}}</small>
+    <br /><br />
+    @if(Auth::user()->rola == 'admin')
+        <a href="/posts/{{$post->id}}/edit" class="btn btn-primary">Uredi</a><br /><br />
+    @endif
+    @if(Auth::user()->rola == 'admin')
+        <a href="/posts/create" class="btn btn-primary">Briši</a><br /><br />
+    @endif
 @endsection
