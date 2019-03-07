@@ -16,6 +16,10 @@
         <a href="/posts/{{$post->id}}/edit" class="btn btn-primary">Uredi</a><br /><br />
     @endif
     @if(Auth::user()->rola == 'admin')
-        <a href="/posts/create" class="btn btn-primary">Briši</a><br /><br />
+    <form action="{{ route('posts.destroy', $post->id) }}" method="POST">
+        @csrf
+        @method('DELETE')
+        <input type="submit" class="btn btn-danger pull-right" value="Briši">
+    </form>
     @endif
 @endsection
