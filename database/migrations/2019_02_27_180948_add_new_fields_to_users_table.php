@@ -15,7 +15,7 @@ class AddNewFieldsToUsersTable extends Migration
     {
         Schema::table('users', function (Blueprint $table) {
             $table->date('clanarina')->default(DB::raw('NOW()'));
-            $table->char('rola', 32)->default('user');
+            $table->string('rola', 32)->default('user');
         });
     }
 

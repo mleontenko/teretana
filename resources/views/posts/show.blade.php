@@ -3,7 +3,8 @@
 @section('content')
     <br />
     <a href="/posts" class="btn btn-primary">Natrag</a>
-    <br /><br />
+    <br />    
+    <br />
     <h1>{{$post->title}}</h1>       
     <div>
         {{$post->body}}

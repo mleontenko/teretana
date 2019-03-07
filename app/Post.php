@@ -9,7 +9,7 @@ class Post extends Model
     // Table Name
     protected $table = 'posts';
     // Primary key
-    public $primaryKey = 'id';
+    //public $primaryKey = 'id';
     // Timestamps
     public $timestamps = true;
 }

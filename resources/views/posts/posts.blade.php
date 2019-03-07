@@ -2,7 +2,10 @@
 
 @section('content')
     <br />
-    <h1>Posts</h1>
+    <h1>Posts</h1> 
+        @if(Auth::user()->rola == 'admin')
+            <a href="/posts/create" class="btn btn-primary">Dodaj novi</a><br /><br />
+        @endif
         @if(count($posts) > 0)
             @foreach($posts as $post)
                 <div class="card">
