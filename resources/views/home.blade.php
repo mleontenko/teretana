@@ -26,7 +26,12 @@
                                 {{Auth::user()->clanarina}}
                             </div>
                         @endif
-                        </span>
+                    </span>
+                    <form action="{{ route('themes.update', [Auth::user()->id]) }}" method="POST">
+                        @csrf
+                        @method('PUT')
+                        <input type="submit" class="btn btn-primary" value="Promijeni temu">                        
+                    </form>
                 </div>
             </div>
         </div>

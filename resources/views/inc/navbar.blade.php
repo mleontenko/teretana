@@ -1,4 +1,8 @@
+@guest
 <nav class="navbar navbar-expand-md navbar-laravel navbar-light">
+@else
+<nav class="navbar navbar-expand-md navbar-laravel navbar-{{ Auth::user()->tema }} bg-{{ Auth::user()->tema }}">
+@endguest
     <div class="container">
         <a class="navbar-brand" href="{{ url('/') }}">
             {{ config('app.name', 'Laravel') }}
