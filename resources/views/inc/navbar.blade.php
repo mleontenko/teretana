@@ -17,6 +17,9 @@
                 @if(Auth::check())
                     <li><a class="nav-link" href="/trainings">Treninzi</a></li>
                 @endif
+                @if(Auth::check())
+                    <li><a class="nav-link" href="/lockers">Ormarići</a></li>
+                @endif
                 <li><a class="nav-link" href="/posts">Obavijesti</a></li>
             </ul>
 

@@ -3,7 +3,7 @@
 @section('content')
     <br />
     <h1>Posts</h1> 
-        @if(Auth::user()->rola == 'admin')
+        @if(Auth::check() && Auth::user()->rola == 'admin')
             <a href="/posts/create" class="btn btn-primary">Dodaj novi</a><br /><br />
         @endif
         @if(count($posts) > 0)

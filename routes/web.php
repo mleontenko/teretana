@@ -24,3 +24,5 @@ Route::resource('posts', 'PostsController');
 Route::resource('themes', 'ThemesController');
 
 Route::resource('trainings', 'TrainingsController');
+
+Route::resource('lockers', 'LockersController');

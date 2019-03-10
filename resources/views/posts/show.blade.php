@@ -12,10 +12,10 @@
     <hr>
     <small>Objavljeno: {{$post->created_at}}</small>
     <br /><br />
-    @if(Auth::user()->rola == 'admin')
+    @if(Auth::check() && Auth::user()->rola == 'admin')
         <a href="/posts/{{$post->id}}/edit" class="btn btn-primary">Uredi</a><br /><br />
     @endif
-    @if(Auth::user()->rola == 'admin')
+    @if(Auth::check() && Auth::user()->rola == 'admin')
     <form action="{{ route('posts.destroy', $post->id) }}" method="POST">
         @csrf
         @method('DELETE')
