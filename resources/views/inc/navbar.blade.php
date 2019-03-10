@@ -14,7 +14,10 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <!-- Left Side Of Navbar -->
             <ul class="navbar-nav mr-auto">
-                <li><a href="/posts">Obavijesti</a></li>
+                @if(Auth::check())
+                    <li><a class="nav-link" href="/trainings">Treninzi</a></li>
+                @endif
+                <li><a class="nav-link" href="/posts">Obavijesti</a></li>
             </ul>
 
             <!-- Right Side Of Navbar -->
