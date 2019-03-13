@@ -26,3 +26,5 @@ Route::resource('themes', 'ThemesController');
 Route::resource('trainings', 'TrainingsController');
 
 Route::resource('lockers', 'LockersController');
+
+Route::resource('membership', 'MembershipController');

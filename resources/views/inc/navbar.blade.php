@@ -21,6 +21,7 @@
                     <li><a class="nav-link" href="/lockers">Ormarići</a></li>
                 @endif
                 <li><a class="nav-link" href="/posts">Obavijesti</a></li>
+                
             </ul>
 
             <!-- Right Side Of Navbar -->
@@ -43,6 +44,9 @@
 
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="/home">Profil</a>
+                            @if(Auth::check() && Auth::user()->rola == 'admin')
+                                <a class="dropdown-item" href="/membership">Admin panel</a>
+                            @endif
                             <a class="dropdown-item" href="{{ route('logout') }}"
                                 onclick="event.preventDefault();
                                                 document.getElementById('logout-form').submit();">
