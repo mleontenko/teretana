@@ -27,11 +27,28 @@
                             </div>
                         @endif
                     </span>
+                    <br /><br /><br /><br />
                     <form action="{{ route('themes.update', [Auth::user()->id]) }}" method="POST">
                         @csrf
                         @method('PUT')
                         <input type="submit" class="btn btn-primary" value="Promijeni temu">                        
                     </form>
+                    <br /><br />
+                    @if(Auth::user()->newsletter == FALSE)
+                    <p>Niste pretplaćeni na newsletter</p>
+                    <form action="{{ route('newsletter.store') }}" method="POST">
+                        @csrf
+                        <input type="hidden" value={{Auth::user()->id}} name="id">
+                        <input type="submit" class="btn btn-primary" value="Pretplati se">                        
+                    </form>
+                    @elseif(Auth::user()->newsletter == TRUE)
+                    <p>Pretplaćeni ste na newsletter</p>
+                    <form action="{{ route('newsletter.store') }}" method="POST">
+                        @csrf
+                        <input type="hidden" value={{Auth::user()->id}} name="id">
+                        <input type="submit" class="btn btn-danger" value="Otkaži">                        
+                    </form>
+                    @endif
                 </div>
             </div>
         </div>
