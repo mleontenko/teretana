@@ -10,7 +10,8 @@
         {{$post->body}}
     </div>
     <hr>
-    <small>Objavljeno: {{$post->created_at}}</small>
+    <small>Objavljeno: {{$post->created_at}}</small><br />
+    <small>Autor: {{$post->korisnik_ime->name}}</small>
     <br /><br />
     @if(Auth::check() && Auth::user()->rola == 'admin')
         <a href="/posts/{{$post->id}}/edit" class="btn btn-primary">Uredi</a><br /><br />

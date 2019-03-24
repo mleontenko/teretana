@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Post;
+use App\User;
+use Auth;
 
 class PostsController extends Controller
 {
@@ -43,8 +45,10 @@ class PostsController extends Controller
 
         // Create post
         $post = new Post;
+        $user = Auth::user();
         $post->title = $request->input('title');
         $post->body = $request->input('body');
+        $post->user_id = $user->id;
         $post->save();
 
         return redirect('/posts')->with('success', 'Vijest objavljena');
@@ -59,6 +63,8 @@ class PostsController extends Controller
     public function show($id)
     {
         $post = Post::find($id);
+        $user = User::find($post->user_id);
+        $post->korisnik_ime = $user;
         return view('posts.show')->with('post', $post);
     }
 

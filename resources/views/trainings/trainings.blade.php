@@ -19,16 +19,18 @@
         @if(count($trainings) > 0)
             @foreach($trainings as $training)
                 <div class="card">
-                <h3>{{$training->naziv}}</h3>
-                <p>Termin: {{$training->termin}}</p>
-                <p>Trener: {{$training->trener}}</p>
-                <form action="{{ route('trainings.update', [Auth::user()->id]) }}" method="POST">
-                    @csrf
-                    @method('PUT')
-                    <input name="trening_id" value="{{$training->id}}" type="hidden">
-                    <input type="submit" class="btn btn-primary" value="Upiši">                        
-                </form>                
-                </div>
+                    <div class="card-body">
+                        <h3>{{$training->naziv}}</h3>
+                        <p>Termin: {{$training->termin}}</p>
+                        <p>Trener: {{$training->trener}}</p>
+                        <form action="{{ route('trainings.update', [Auth::user()->id]) }}" method="POST">
+                            @csrf
+                            @method('PUT')
+                            <input name="trening_id" value="{{$training->id}}" type="hidden">
+                            <input type="submit" class="btn btn-primary" value="Upiši">                        
+                        </form>                
+                    </div>
+                </div>   
                 <br />
             @endforeach
         @else
