@@ -4,6 +4,7 @@
     <br />
     <h3>{{$user->name}}</h3> 
     <br />
+    <p>ID: {{$user->id}}</p>
     <p>email: {{$user->email}}</p>
     <p>Datum registracije: {{$user->created_at}}</p>
     <p>Članarina vrijedi do: {{$user->clanarina}}</p>
