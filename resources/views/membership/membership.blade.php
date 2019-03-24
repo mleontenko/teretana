@@ -18,7 +18,7 @@
         @foreach($members as $member)
         <tr>
             <td>{{$member->id}}</td>
-            <td>{{$member->name}}</td>
+        <td><a href="/user/{{$member->id}}">{{$member->name}}</a></td>
             <td>{{$member->email}}</td>
             <td>
                 @if($member->newsletter == FALSE)

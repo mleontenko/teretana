@@ -30,3 +30,5 @@ Route::resource('lockers', 'LockersController');
 Route::resource('membership', 'MembershipController');
 
 Route::resource('newsletter', 'NewsletterController');
+
+Route::resource('user', 'UserDetailsController');
