@@ -2,7 +2,7 @@
 
 @section('content')
     <br />
-    <h1>Ormarići</h1> 
+    <h3>Ormarići</h3> 
     @if($selectedLocker != NULL)
         <p>Odabrali ste ormarić: {{$selectedLocker->id}}</p>
         <form action="{{ route('lockers.destroy', [Auth::user()->id]) }}" method="POST">

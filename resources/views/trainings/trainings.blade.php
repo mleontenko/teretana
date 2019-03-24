@@ -2,7 +2,7 @@
 
 @section('content')
     <br />
-    <h1>Treninzi</h1> 
+    <h3>Treninzi</h3> 
         @if(Auth::user()->trening == NULL)
             <p>Nemate upisan trening</p>
         @elseif(Auth::user()->trening != NULL)

@@ -29,11 +29,11 @@
                 <!-- Authentication Links -->
                 @guest
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                        <a class="nav-link" href="{{ route('login') }}">{{ __('Prijava') }}</a>
                     </li>
                     @if (Route::has('register'))
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                            <a class="nav-link" href="{{ route('register') }}">{{ __('Registracija') }}</a>
                         </li>
                     @endif
                 @else
@@ -45,12 +45,12 @@
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="/home">Profil</a>
                             @if(Auth::check() && Auth::user()->rola == 'admin')
-                                <a class="dropdown-item" href="/membership">Admin panel</a>
+                                <a class="dropdown-item" href="/membership">Administratorsko sučelje</a>
                             @endif
                             <a class="dropdown-item" href="{{ route('logout') }}"
                                 onclick="event.preventDefault();
                                                 document.getElementById('logout-form').submit();">
-                                {{ __('Logout') }}
+                                {{ __('Odjavi se') }}
                             </a>                            
 
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
