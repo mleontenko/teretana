@@ -22,12 +22,12 @@
 </head>
 <body>
     <div id="app">
-            @include('inc.navbar')
             @guest
             <div class="container-fluid light">
             @else
             <div class="container-fluid {{ Auth::user()->tema }}"> 
             @endguest
+            @include('inc.navbar')
                 <div class="container padd">
                     @include('inc.messages')
                     @yield('content')

@@ -1,8 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-    <br />
-
     <div class="card">
     <h1 class="card-header text-center">Treninzi</h1>
         <div class="card-body">
