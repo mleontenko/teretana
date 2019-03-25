@@ -22,11 +22,16 @@
 </head>
 <body>
     <div id="app">
-            @include('inc.navbar')        
-
-            <div class="container">
-                @include('inc.messages')
-                @yield('content')
+            @include('inc.navbar')
+            @guest
+            <div class="container-fluid light">
+            @else
+            <div class="container-fluid {{ Auth::user()->tema }}"> 
+            @endguest
+                <div class="container padd">
+                    @include('inc.messages')
+                    @yield('content')
+                </div>
             </div>
     </div>
 </body>

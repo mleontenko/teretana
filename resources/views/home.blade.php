@@ -6,7 +6,7 @@
         <div class="col-md-8">
             <br />
             <div class="card">                
-                <div class="card-header">Profil korisnika</div>
+                <h2 class="card-header">Profil korisnika</h2>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -27,7 +27,7 @@
                             </div>
                         @endif
                     </span>
-                    <br /><br /><br /><br />
+                    <br /><br />
                     <form action="{{ route('themes.update', [Auth::user()->id]) }}" method="POST">
                         @csrf
                         @method('PUT')

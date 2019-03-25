@@ -1,8 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
-    <br />
-    <h2>Popis članova</h2> 
+
+<div class="card">
+    <h1 class="card-header text-center">Popis članova</h1>
     <table class="table">
         <thead>
             <tr>
@@ -33,6 +34,7 @@
             </td>
         </tr>
         @endforeach
-    </tbody>
-</table>
+        </tbody>
+    </table>
+</div>
 @endsection

@@ -1,1 +1,31 @@
 .alert {display:inline-block;}
+
+.light {
+    background: url("images/gymlight.jpg");
+    height: 100vh;
+    overflow: auto;
+}
+
+.jumbotron {
+    opacity: 0.98;
+}
+
+.dark {
+    background: url("images/gymdark.jpg");
+    height: 100vh;
+    overflow: auto;
+}
+
+.padd {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.marg10 {
+    margin-top: 10px;
+}
+
+.card {
+    margin-top: 20px;
+    opacity: 0.98;
+}
