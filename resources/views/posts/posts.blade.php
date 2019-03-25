@@ -18,7 +18,6 @@
                 <p>Objavljeno: {{$post->created_at}}</p>
                 </div>
             </div>
-            <br />
         @endforeach
         {{$posts->links()}}
     @else

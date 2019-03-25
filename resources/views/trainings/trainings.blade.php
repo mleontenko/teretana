@@ -31,8 +31,7 @@
                         <input type="submit" class="btn btn-primary" value="Upiši">                        
                     </form>                
                 </div>
-            </div>   
-            <br />
+            </div>
         @endforeach
     @else
         <p>Nema definiranih treninga.</p>
